@@ -1,6 +1,9 @@
+using ArchitecturePatternsSandbox.WebApi.Extensions;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddServicesExtensions(builder.Configuration);
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();

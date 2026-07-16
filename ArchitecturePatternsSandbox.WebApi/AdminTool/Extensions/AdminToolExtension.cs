@@ -1,6 +1,8 @@
 ﻿using AdminTool.Configuration;
 using AdminTool.Features.GetSettings;
+using AdminTool.Features.UpdateSettings;
 using AdminTool.Infrastructure.Data;
+using AdminTool.Infrastructure.Helpers;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -11,12 +13,18 @@ namespace AdminTool.Extensions
     {
         public static IServiceCollection AddAdminToolExtension(this IServiceCollection services, IConfiguration configuration)
         {
+            services.AddAutoMapper(cfg =>
+            {
+                cfg.AddProfile<AdminToolMappingProfile>();
+            });
+
             services.AddDbContext<AdminToolDbContext>(options =>
                 options.UseSqlServer(configuration.GetConnectionString("AdminTool")));
 
             services.Configure<VisualSettings>(configuration.GetSection("VisualSettings"));
 
-            services.AddTransient<GetSettingsHandler>();
+            services.AddSingleton<GetSettingsHandler>();
+            services.AddTransient<UpdateSettingsHandler>();
 
             return services;
         }

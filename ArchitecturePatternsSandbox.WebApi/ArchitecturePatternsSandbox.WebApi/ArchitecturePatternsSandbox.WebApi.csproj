@@ -11,6 +11,7 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" />
     <PackageReference Include="Swashbuckle.AspNetCore" />
+	<PackageReference Include="AutoMapper" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,4 +1,5 @@
 ﻿using AdminTool.Extensions;
+using Microsoft.EntityFrameworkCore;
 
 namespace ArchitecturePatternsSandbox.WebApi.Extensions
 {
@@ -9,6 +10,15 @@ namespace ArchitecturePatternsSandbox.WebApi.Extensions
             services.AddAdminToolExtension(configuration);
 
             return services;
+        }
+
+        public static IConfigurationBuilder AddConfigurationExtensions(this IConfigurationBuilder builder, IConfiguration configuration)
+        {
+            var connectionString = configuration.GetConnectionString("AdminTool");
+            builder.AddSqlConfiguration(
+                opt => opt.UseSqlServer(connectionString));
+
+            return builder;
         }
     }
 }

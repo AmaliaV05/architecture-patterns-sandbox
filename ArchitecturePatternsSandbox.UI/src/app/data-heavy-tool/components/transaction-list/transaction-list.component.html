@@ -1,0 +1,33 @@
+<div class="table-container">
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Asset</th>
+        <th>Type</th>
+        <th>Quantity</th>
+        <th>Price/Unit</th>
+        <th>Fee</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let transaction of transactions">
+        <td>{{ transaction.id }}</td>
+        <td><strong>{{ transaction.assetTicker }}</strong></td>
+        <td>
+          <span [ngClass]="{'badge-buy': transaction.transactionType === transactionType.Buy, 'badge-sell': transaction.transactionType === transactionType.Sell}">
+            {{ transaction.transactionType }}
+          </span>
+        </td>
+        <td>{{ transaction.quantity | number:'1.2-4' }}</td>
+        <td>{{ transaction.pricePerUnit | currency }}</td>
+        <td>{{ transaction.fee | currency }}</td>
+        <td>{{ transaction.transactionDate | date:'mediumDate' }}</td>
+      </tr>
+      <tr *ngIf="transactions.length === 0">
+        <td colspan="8" class="no-data">No transactions found.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

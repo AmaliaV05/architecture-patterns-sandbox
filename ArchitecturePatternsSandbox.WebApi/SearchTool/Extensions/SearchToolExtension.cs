@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using SearchTool.Data;
+using SearchTool.Features.SearchProducts;
 
 namespace SearchTool.Extensions
 {
@@ -11,6 +12,8 @@ namespace SearchTool.Extensions
         {
             services.AddDbContext<SearchToolDbContext>(options =>
                 options.UseSqlServer(configuration.GetConnectionString("SearchTool")));
+
+            services.AddTransient<SearchProductsQuery>();
 
             return services;
         }

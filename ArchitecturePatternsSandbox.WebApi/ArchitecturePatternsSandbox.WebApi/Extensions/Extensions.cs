@@ -1,6 +1,7 @@
 ﻿using AdminTool.Extensions;
 using DataHeavyTool.Extensions;
 using ECommerceLite.Extensions;
+using InvoiceGeneratorTool.Extensions;
 using Microsoft.EntityFrameworkCore;
 using SearchTool.Extensions;
 using StatusCheckSystem.Extensions;
@@ -16,6 +17,7 @@ namespace ArchitecturePatternsSandbox.WebApi.Extensions
             services.AddECommerceLite(configuration);
             services.AddSearchToolExtension(configuration);
             services.AddDataHeavyToolExtension(configuration);
+            services.AddInvoiceGeneratorToolExtension(configuration);
 
             return services;
         }

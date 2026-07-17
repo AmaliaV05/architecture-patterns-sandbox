@@ -1,0 +1,24 @@
+<div class="verification-list-container">
+  <div class="verification-list-header">
+    <h2>Status Check</h2>
+  </div>
+  <div class="verification-list-content">
+    @for (verification of verifications; track verification) {
+      <mat-list role="list">
+        <mat-list-item>
+          <mat-icon matListItemIcon [ngStyle]="verification.status === statusUp ? { color: 'green' } : { color: 'red' }">circle</mat-icon>
+          <span matListItemTitle>
+            <a href="{{ verification.url }}">Link</a>
+          </span>
+          <span matListItemLine>Latency: {{ verification.latency }}</span>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+      </mat-list>
+    }
+  </div>
+  <div class="refresh-button-wrapper">
+    <button mat-raised-button color="primary" (click)="refreshVerifications()">
+      Refresh
+    </button>
+  </div>
+</div>

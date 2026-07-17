@@ -1,0 +1,17 @@
+.verification-list-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  padding: 2rem;
+  margin: 2rem;
+  max-width: 100%;
+  border: 3px solid #673ab7;
+  border-radius: 20px;
+}
+
+.verification-list-header,
+.refresh-button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

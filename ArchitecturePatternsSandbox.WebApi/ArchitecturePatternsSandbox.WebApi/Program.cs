@@ -1,8 +1,22 @@
 using ArchitecturePatternsSandbox.WebApi.Extensions;
 
+var CustomOriginsPolicy = "_customOriginsPolicy";
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: CustomOriginsPolicy,
+                      policy =>
+                      {
+                          policy.WithOrigins("http://localhost:4200")
+                          .AllowAnyHeader()
+                          .AllowAnyMethod()
+                          .AllowCredentials();
+                      });
+});
+
 builder.Services.AddServicesExtensions(builder.Configuration);
 builder.Configuration.AddConfigurationExtensions(builder.Configuration);
 
@@ -20,6 +34,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors(CustomOriginsPolicy);
 
 app.UseAuthorization();
 

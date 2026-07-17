@@ -10,8 +10,8 @@ export class ApiService {
 
   constructor(private httpClient: HttpClient) {}
 
-  get<T>(endpoint: string): Observable<T> {
-    return this.httpClient.get<T>(`${this.apiUrl}/${endpoint}`);
+  get<T>(endpoint: string, options?: { params?: any }): Observable<T> {
+    return this.httpClient.get<T>(`${this.apiUrl}/${endpoint}`, options);
   }
 
   post<T, D>(endpoint: string, data: D): Observable<T> {

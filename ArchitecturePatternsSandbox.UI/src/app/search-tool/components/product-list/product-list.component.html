@@ -1,0 +1,21 @@
+<div class="search-container">
+  <div class="search-field">
+    <label for="product-search" class="search-label">Search Products</label>
+    <input id="product-search" type="text" placeholder="Type to search..." class="search-input" (input)="onSearchInput($event)" />
+  </div>
+  <div class="search-results">
+    <ng-container *ngIf="products$ | async as products; else loadingOrEmpty">
+      <ul class="results-list" *ngIf="products.length > 0; else noResults">
+        <li *ngFor="let product of products" class="result-item">
+          <span class="product-name">{{ product.name }}</span>
+        </li>
+      </ul>
+    </ng-container>
+    <ng-template #noResults>
+      <div class="info-message">No products found matching your search.</div>
+    </ng-template>
+    <ng-template #loadingOrEmpty>
+      <div class="info-message text-muted">Type something to begin searching...</div>
+    </ng-template>
+  </div>
+</div>

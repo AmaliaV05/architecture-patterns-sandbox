@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
 using SearchTool.Features.SearchProducts;
 
 namespace ArchitecturePatternsSandbox.WebApi.Controllers.SearchTool
@@ -8,8 +9,11 @@ namespace ArchitecturePatternsSandbox.WebApi.Controllers.SearchTool
     [Tags("Search Tool")]
     public class ProductController : ControllerBase
     {
-        public ProductController()
+        private readonly IMapper _mapper;
+
+        public ProductController(IMapper mapper)
         {
+            _mapper = mapper;
         }
 
         [HttpGet]
@@ -20,7 +24,9 @@ namespace ArchitecturePatternsSandbox.WebApi.Controllers.SearchTool
         {
             var products = await query.GetProductsAsync(productName, cancellationToken);
 
-            return Ok(products);
+            var productsDto = _mapper.Map<List<ProductDto>>(products);
+
+            return Ok(productsDto);
         }
     }
 }

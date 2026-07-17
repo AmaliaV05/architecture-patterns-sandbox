@@ -3,11 +3,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using SearchTool.Data;
+using SearchTool.Infrastructure.Data;
 
 #nullable disable
 
-namespace SearchTool.Data.Migrations
+namespace SearchTool.Infrastructure.Data.Migrations
 {
     [DbContext(typeof(SearchToolDbContext))]
     partial class SearchToolDbContextModelSnapshot : ModelSnapshot
@@ -21,7 +21,7 @@ namespace SearchTool.Data.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("SearchTool.Data.Entities.Product", b =>
+            modelBuilder.Entity("SearchTool.Infrastructure.Data.Entities.Product", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()

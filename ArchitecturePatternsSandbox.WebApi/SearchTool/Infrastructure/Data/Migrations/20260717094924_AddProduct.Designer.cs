@@ -4,14 +4,14 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using SearchTool.Data;
+using SearchTool.Infrastructure.Data;
 
 #nullable disable
 
-namespace SearchTool.Data.Migrations
+namespace SearchTool.Infrastructure.Data.Migrations
 {
     [DbContext(typeof(SearchToolDbContext))]
-    [Migration("20260717091803_AddProduct")]
+    [Migration("20260717094924_AddProduct")]
     partial class AddProduct
     {
         /// <inheritdoc />
@@ -24,7 +24,7 @@ namespace SearchTool.Data.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("SearchTool.Data.Entities.Product", b =>
+            modelBuilder.Entity("SearchTool.Infrastructure.Data.Entities.Product", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()

@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using SearchTool.Data.Entities;
+using SearchTool.Infrastructure.Data.Entities;
 
-namespace SearchTool.Data
+namespace SearchTool.Infrastructure.Data
 {
     public class SearchToolDbContext : DbContext
     {

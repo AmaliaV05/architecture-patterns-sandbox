@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using SearchTool.Data;
-using SearchTool.Data.Entities;
+using SearchTool.Infrastructure.Data;
+using SearchTool.Infrastructure.Data.Entities;
 
 namespace SearchTool.Features.SearchProducts
 {

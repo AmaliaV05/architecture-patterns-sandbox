@@ -1,4 +1,4 @@
-﻿namespace SearchTool.Data.Entities
+﻿namespace SearchTool.Infrastructure.Data.Entities
 {
     public class Product
     {

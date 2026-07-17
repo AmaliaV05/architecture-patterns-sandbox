@@ -4,7 +4,7 @@
 
 #pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
 
-namespace SearchTool.Data.Migrations
+namespace SearchTool.Infrastructure.Data.Migrations
 {
     /// <inheritdoc />
     public partial class AddProduct : Migration

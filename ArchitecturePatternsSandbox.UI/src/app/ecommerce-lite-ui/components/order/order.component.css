@@ -1,0 +1,23 @@
+.order-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  padding: 2rem;
+  margin: 2rem;
+  max-width: 50%;
+  border: 3px solid #673ab7;
+  border-radius: 20px;
+}
+
+.order-content {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  max-width: 100%;
+}
+
+form mat-form-field {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}

@@ -1,0 +1,24 @@
+<div class="order-container">
+  <div class="order-header">
+    <h2>Place Your Order</h2>
+  </div>
+  <div class="order-content">
+    <form [formGroup]="orderForm" (ngSubmit)="placeOrder()">
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input matInput class="form-control" formControlName="customerEmail" />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Product</mat-label>
+        <input matInput class="form-control" formControlName="product" />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Total Amount</mat-label>
+        <input matInput class="form-control" formControlName="totalAmount" />
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit">
+        Place Order
+      </button>
+    </form>
+  </div>
+</div>

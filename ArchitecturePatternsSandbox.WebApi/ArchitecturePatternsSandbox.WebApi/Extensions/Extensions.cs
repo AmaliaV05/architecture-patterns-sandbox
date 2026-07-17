@@ -1,4 +1,5 @@
 ﻿using AdminTool.Extensions;
+using ECommerceLite.Extensions;
 using Microsoft.EntityFrameworkCore;
 using StatusCheckSystem.Extensions;
 
@@ -10,6 +11,7 @@ namespace ArchitecturePatternsSandbox.WebApi.Extensions
         {
             services.AddAdminToolExtension(configuration);
             services.AddStatusCheckSystemExtension(configuration);
+            services.AddECommerceLite(configuration);
 
             return services;
         }

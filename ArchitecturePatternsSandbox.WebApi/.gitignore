@@ -70,3 +70,5 @@ appsettings.Local.json
 ## OS-specific files
 .DS_Store
 Thumbs.db
+
+order-logs.txt

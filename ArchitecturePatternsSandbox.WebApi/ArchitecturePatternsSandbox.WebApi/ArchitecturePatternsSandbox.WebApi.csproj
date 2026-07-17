@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AdminTool\AdminTool.csproj" />
+    <ProjectReference Include="..\ECommerceLite\ECommerceLite.csproj" />
     <ProjectReference Include="..\StatusCheckSystem\StatusCheckSystem.csproj" />
   </ItemGroup>
 

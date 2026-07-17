@@ -21,6 +21,9 @@ builder.Services.AddServicesExtensions(builder.Configuration);
 builder.Configuration.AddConfigurationExtensions(builder.Configuration);
 
 builder.Services.AddControllers();
+
+builder.Services.AddMemoryCache();
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 

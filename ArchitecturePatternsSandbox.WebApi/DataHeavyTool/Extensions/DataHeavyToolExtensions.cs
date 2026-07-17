@@ -1,4 +1,6 @@
-﻿using DataHeavyTool.Data.Data;
+﻿using DataHeavyTool.BusinessLogic.Interfaces;
+using DataHeavyTool.BusinessLogic.Services;
+using DataHeavyTool.Data.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -11,6 +13,9 @@ namespace DataHeavyTool.Extensions
         {
             services.AddDbContext<DataHeavyToolDbContext>(options =>
                 options.UseSqlServer(configuration.GetConnectionString("DataHeavyTool")));
+
+            services.AddScoped<IFileService, FileService>();
+            services.AddScoped<ITransactionsService, TransactionsService>();
 
             return services;
         }

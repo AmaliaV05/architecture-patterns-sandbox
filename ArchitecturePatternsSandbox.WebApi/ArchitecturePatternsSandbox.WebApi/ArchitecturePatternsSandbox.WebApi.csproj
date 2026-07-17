@@ -18,6 +18,7 @@
     <ProjectReference Include="..\AdminTool\AdminTool.csproj" />
     <ProjectReference Include="..\DataHeavyTool\DataHeavyTool.csproj" />
     <ProjectReference Include="..\ECommerceLite\ECommerceLite.csproj" />
+    <ProjectReference Include="..\InventorySystem\InventorySystem.csproj" />
     <ProjectReference Include="..\InvoiceGeneratorTool\InvoiceGeneratorTool.csproj" />
     <ProjectReference Include="..\SearchTool\SearchTool.csproj" />
     <ProjectReference Include="..\StatusCheckSystem\StatusCheckSystem.csproj" />

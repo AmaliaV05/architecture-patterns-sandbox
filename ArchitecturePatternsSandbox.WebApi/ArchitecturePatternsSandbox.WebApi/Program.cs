@@ -17,6 +17,8 @@ builder.Services.AddCors(options =>
                       });
 });
 
+builder.Services.AddSingleton(TimeProvider.System);
+
 builder.Services.AddServicesExtensions(builder.Configuration);
 builder.Configuration.AddConfigurationExtensions(builder.Configuration);
 

@@ -5,6 +5,10 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+	<ItemGroup>
+		<PackageReference Include="AutoMapper" />
+	</ItemGroup>
+
   <ItemGroup>
     <ProjectReference Include="..\InventorySystem.BusinessLogic\InventorySystem.BusinessLogic.csproj" />
   </ItemGroup>

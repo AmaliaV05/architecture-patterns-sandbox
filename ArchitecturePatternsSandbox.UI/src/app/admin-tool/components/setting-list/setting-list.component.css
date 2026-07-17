@@ -1,0 +1,83 @@
+.skills-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 2rem;
+}
+
+.maintenance-mode-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem;
+}
+
+.maintenance-mode-status {
+  visibility: hidden;
+}
+
+p.maintenance-text {
+  margin: 12px 0 !important;
+  text-align: center;
+  letter-spacing: 0.02rem;
+}
+
+.settings-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  padding: 2rem;
+  margin: 2rem;
+  max-width: 50%;
+  border: 3px solid #673ab7;
+  border-radius: 20px;
+}
+
+.settings-content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  padding: 1rem;
+  max-width: 100%;
+}
+
+mat-card-content {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+p {
+  margin: 12px 0;
+  text-align: center;
+  letter-spacing: 0.02rem;
+}
+
+mat-divider {
+  margin: 0;
+  display: block !important;
+  width: 100% !important;
+  border-top-style: solid;
+  border-top-color: var(--mat-divider-color) !important;
+  border-top-width: var(--mat-divider-width);
+}
+
+.setting-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 10px;
+  padding: 0 1rem;
+}

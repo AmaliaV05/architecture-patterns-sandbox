@@ -3,8 +3,11 @@
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
   </PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="AutoMapper" />
+	</ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\StatusCheckSystem.BusinessLayer\StatusCheckSystem.BusinessLayer.csproj" />

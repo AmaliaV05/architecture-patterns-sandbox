@@ -3,8 +3,11 @@
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
   </PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.Http" />
+	</ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\StatusCheckSystem.Data\StatusCheckSystem.Data.csproj" />

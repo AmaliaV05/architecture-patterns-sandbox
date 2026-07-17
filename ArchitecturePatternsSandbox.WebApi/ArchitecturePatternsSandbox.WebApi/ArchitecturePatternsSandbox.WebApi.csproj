@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AdminTool\AdminTool.csproj" />
+    <ProjectReference Include="..\StatusCheckSystem\StatusCheckSystem.csproj" />
   </ItemGroup>
 
 </Project>

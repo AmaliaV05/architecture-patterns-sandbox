@@ -1,5 +1,6 @@
 ﻿using AdminTool.Extensions;
 using Microsoft.EntityFrameworkCore;
+using StatusCheckSystem.Extensions;
 
 namespace ArchitecturePatternsSandbox.WebApi.Extensions
 {
@@ -8,6 +9,7 @@ namespace ArchitecturePatternsSandbox.WebApi.Extensions
         public static IServiceCollection AddServicesExtensions(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddAdminToolExtension(configuration);
+            services.AddStatusCheckSystemExtension(configuration);
 
             return services;
         }

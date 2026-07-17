@@ -1,4 +1,5 @@
 ﻿using AdminTool.Extensions;
+using DataHeavyTool.Extensions;
 using ECommerceLite.Extensions;
 using Microsoft.EntityFrameworkCore;
 using SearchTool.Extensions;
@@ -14,6 +15,7 @@ namespace ArchitecturePatternsSandbox.WebApi.Extensions
             services.AddStatusCheckSystemExtension(configuration);
             services.AddECommerceLite(configuration);
             services.AddSearchToolExtension(configuration);
+            services.AddDataHeavyToolExtension(configuration);
 
             return services;
         }
